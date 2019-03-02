@@ -1,0 +1,85 @@
+<html lang="en" th:with="currentPage='index'" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+
+    <title>Newsfeed</title>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" rel="stylesheet"/>
+    <script crossorigin="anonymous"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/business-casual.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="../../assets/css/global.css" rel="stylesheet"/>
+
+</head>
+<body>
+<div class="container">
+    <div th:if="${param.error}">
+        <div class="alert alert-warning" id="userError" role="alert">
+            <span><strong>ERROR!</strong> Username or password incorrect. Please try again.</span>
+        </div>
+    </div>
+    <div th:if="${param.logout}">
+        <div class="alert alert-warning" id="logout" role="alert">
+            <span>You have successfully logged out!</span>
+        </div>
+    </div>
+    <section class="page-section clearfix">
+        <div class="container">
+            <div class="intro">
+                <img alt="" class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="../../assets/img/intro.jpg"/>
+                <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-lower">Welcome !</span>
+                        <span class="section-heading-upper">To continue, please login.</span>
+                    </h2>
+                    <form id="formArticle1" method="post" th:action="@{/login}">
+
+                        <div class="form-group row">
+                            <div class="col">
+                                <input class="form-control" id="username" name="username" placeholder="Username"
+                                       required=""
+                                       type="text"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <input class="form-control" id="password" name="password" placeholder="Password"
+                                       required="" type="password"/>
+                            </div>
+                        </div>
+                        <div class="intro-button mx-auto">
+                            <button class="btn btn-primary btn-xl" id="login" type="submit">Login</button>
+                        </div>
+                        <br/>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+
+</body>
+</html>

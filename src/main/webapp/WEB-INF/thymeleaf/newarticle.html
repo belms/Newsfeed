@@ -1,0 +1,142 @@
+<html lang="en" th:with="currentPage='articles'" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <meta content="" name="description"/>
+    <meta content="" name="author"/>
+
+    <title>Newsfeed</title>
+    <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" rel="stylesheet"/>
+    <script crossorigin="anonymous"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+          rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet"/>
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/business-casual.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link href="../../assets/css/newarticle.css" rel="stylesheet"/>
+</head>
+<body>
+<a style="background-color: #2F170F; float:right; padding: 1em; position: fixed;  top:0;
+   right:0;" th:href="@{/login}">
+    <i class="material-icons" style="color: white">
+        exit_to_app
+    </i>
+</a>
+<h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Hello, <span th:text="${username}"></span> </span>
+    <span class="site-heading-lower">Read what matters</span>
+</h1>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Newsfeed</a>
+        <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler"
+                data-target="#navbarResponsive" data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" th:href="@{/article/home}">Home</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" th:href="@{/article/all}">All Articles</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" th:href="@{/article/my}">Articles you added</a>
+                </li>
+                <li class="nav-item px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" th:href="@{/article/new}">Add article<span
+                            class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="wrapper">
+    <div class="container" style="background-color: whitesmoke;">
+        <br/><br/> <br/><br/>
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-lower">New Article</span>
+                    </h2><br/>
+                    <form id="formArticle" method="post" th:action="@{/article/new}" th:object="${articleForm}">
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label lbl" for="vote">Vote#:</label>
+                            <div class="col-auto">
+                                <input class="form-control" id="vote" placeholder="0" readonly="" type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label lbl" for="newsfeedUser">User:</label>
+                            <div class="col-auto">
+                                <input class="form-control" id="newsfeedUser" readonly="" th:placeholder="${username}"
+                                       type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label lbl" for="headline">Headline:</label>
+                            <div class="col-auto">
+                                <input class="form-control" id="headline" placeholder="Article Headline" required=""
+                                       th:field="*{articleName}" type="text"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label lbl" for="link">Link:</label>
+                            <div class="col-auto">
+                                <input class="form-control" id="link" placeholder="https://www.example.com" required=""
+                                       th:field="*{link}"
+                                       type="url"/>
+                                <span id="invalidLink" th:text="${invalidLink}"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label lbl" for="author">Author:</label>
+                            <div class="col-auto">
+                                <input class="form-control" id="author" placeholder="Author's full name" required=""
+                                       th:field="*{author}" type="text"/>
+                            </div>
+                        </div>
+                        <!--<a th:href="@{/article/all}" class="btn btn-dark" id="cancel">Cancel</a>-->
+                        <button class="btn" id="publish" style="background-color: #df902a; color: whitesmoke"
+                                type="submit">Publish
+                        </button>
+                        <br/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer text-faded text-center py-5">
+    <div class="container">
+        <p class="m-0 small">JB &copy; 2018</p>
+    </div>
+</footer>
+</body>
+</html>

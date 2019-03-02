@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: bjakupovic
+      changes:
+        - createTable:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: HEADLINE
+                  type: VARCHAR(100)
+              - column:
+                  name: LINK
+                  type: VARCHAR(300)
+              - column:
+                  name: AUTHOR
+                  type: VARCHAR(30)
+              - column:
+                  name: VOTES
+                  type: INT
+              - column:
+                  name: BY_USER
+                  type: INT
+              - column:
+                  name: TIME
+                  type: VARCHAR(45)
+              - addForeignKeyConstraint:
+                  baseColumnNames: BY_USER
+                  baseTableName:  ARTICLE
+                  constraintName: fk_user_id
+                  referencedColumnNames: USER_ID
+                  referencedTableName: NEWSFEED_USER
+              - addNotNullConstraint:
+                  columnDataType: VARCHAR(100)
+                  columnName: HEADLINE
+                  tableName: ARTICLE
+              - addNotNullConstraint:
+                  columnDataType: VARCHAR(300)
+                  columnName: LINK
+                  tableName: ARTICLE
+              - addNotNullConstraint:
+                  columnDataType: VARCHAR(30)
+                  columnName: AUTHOR
+                  tableName: ARTICLE
+              - addNotNullConstraint:
+                  columnDataType: BIGINT
+                  columnName: VOTES
+                  tableName: ARTICLE
+              - addNotNullConstraint:
+                  columnDataType: VARCHAR(45)
+                  columnName: TIME
+                  tableName: ARTICLE
+

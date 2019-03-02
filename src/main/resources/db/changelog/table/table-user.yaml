@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: bjakupovic
+      changes:
+        - createTable:
+            tableName: NEWSFEED_USER
+            columns:
+              - column:
+                  name: USER_ID
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: USERNAME
+                  type: VARCHAR(30)
+              - column:
+                  name: PASSWORD
+                  type: VARCHAR(100)
+              - addNotNullConstraint:
+                  columnDataType: VARCHAR(30)
+                  columnName: USERNAME
+                  tableName: NEWSFEED_USER
+              - addNotNullConstraint:
+                  columnDataType: VARCHAR(100)
+                  columnName: PASSWORD
+                  tableName: NEWSFEED_USER

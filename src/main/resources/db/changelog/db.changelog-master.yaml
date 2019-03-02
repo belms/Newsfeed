@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - include:
+      file: table/table-user.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: table/table-article.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: table/table-voting.yaml
+      relativeToChangelogFile: true
+
+  - include:
+      file: data/data-user.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: data/data-article.yaml
+      relativeToChangelogFile: true

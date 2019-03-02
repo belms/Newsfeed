@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: 9
+      author: bjakupovic
+      changes:
+        - createTable:
+            tableName: voting
+            columns:
+              - column:
+                  name: VOTING_ID
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: USER_VOTED
+                  type: INT
+              - column:
+                  name: VOTE
+                  type: VARCHAR(10)
+              - column:
+                  name: ARTICLE_ID
+                  type: INT
+              - addForeignKeyConstraint:
+                  baseColumnNames: USER_VOTED
+                  baseTableName:  voting
+                  constraintName: fk_user_voted_id
+                  referencedColumnNames: USER_ID
+                  referencedTableName: newsfeed_user
+              - addForeignKeyConstraint:
+                  baseColumnNames: ARTICLE_ID
+                  baseTableName:  voting
+                  constraintName: fk_article_id
+                  referencedColumnNames: ID_ARTICLE
+                  referencedTableName: article

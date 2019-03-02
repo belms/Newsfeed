@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: bjakupovic
+      changes:
+        - insert:
+            tableName: NEWSFEED_USER
+            columns:
+              - column:
+                  name: USER_ID
+                  value: 100
+              - column:
+                  name: USERNAME
+                  value: 'bjakupovic'
+              - column:
+                  name: PASSWORD
+                  value: '$2a$06$ocI7/xX9mNR3o7LePPAtWOX8aLzRTsrYNOYSa2.wx31IE/trQPb2S'
+        - insert:
+            tableName: NEWSFEED_USER
+            columns:
+              - column:
+                  name: USER_ID
+                  value: 200
+              - column:
+                  name: USERNAME
+                  value: 'yabdalla'
+              - column:
+                  name: PASSWORD
+                  value: '$2a$06$ocI7/xX9mNR3o7LePPAtWOX8aLzRTsrYNOYSa2.wx31IE/trQPb2S'

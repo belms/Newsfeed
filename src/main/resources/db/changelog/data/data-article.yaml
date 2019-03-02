@@ -1,0 +1,530 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: bjakupovic
+      changes:
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 10
+              - column:
+                  name: HEADLINE
+                  value: 'Sending a Tesla into space wasn’t such a dumb idea'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/tldr/2018/2/7/16984284/tesla-space-falcon-heavy-launch-elon-musk'
+              - column:
+                  name: AUTHOR
+                  value: 'Vlad Savov'
+              - column:
+                  name: VOTES
+                  value: 5
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 20
+              - column:
+                  name: HEADLINE
+                  value: 'Chrome will mark all HTTP sites as ‘not secure’ starting in July'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/2018/2/8/16991254/chrome-not-secure-marked-http-encryption-ssl'
+              - column:
+                  name: AUTHOR
+                  value: 'Russell Brandom'
+              - column:
+                  name: VOTES
+                  value: 8
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 30
+              - column:
+                  name: HEADLINE
+                  value: 'Microsoft puts Minecraft boss in charge of Xbox games'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/2018/1/17/16902892/microsoft-xbox-games-minecraft-matt-booty-promotion'
+              - column:
+                  name: AUTHOR
+                  value: 'Tom Warren'
+              - column:
+                  name: VOTES
+                  value: 3
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 40
+              - column:
+                  name: HEADLINE
+                  value: 'Elon Musk’s giant battery is now delivering power to South Australia'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/2017/12/1/16723186/elon-musk-battery-launched-south-australia'
+              - column:
+                  name: AUTHOR
+                  value: 'Thuy Ong'
+              - column:
+                  name: VOTES
+                  value: 10
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 50
+              - column:
+                  name: HEADLINE
+                  value: 'Apple addresses iOS source code leak'
+              - column:
+                  name: LINK
+                  value: 'https://techcrunch.com/2018/02/08/apple-addresses-ios-source-code-leak-says-it-appears-to-be-tied-to-three-year-old-software/'
+              - column:
+                  name: AUTHOR
+                  value: 'Brian Heater'
+              - column:
+                  name: VOTES
+                  value: 6
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 60
+              - column:
+                  name: HEADLINE
+                  value: 'Intel’s latest chip is designed for computing at the edge'
+              - column:
+                  name: LINK
+                  value: 'https://techcrunch.com/2018/02/07/intels-latest-chip-is-designed-for-computing-at-the-edge/'
+              - column:
+                  name: AUTHOR
+                  value: 'Ron Miller'
+              - column:
+                  name: VOTES
+                  value: 8
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 70
+              - column:
+                  name: HEADLINE
+                  value: 'Forget self-driving cars — these self-driving slippers are the future we deserve'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/2018/2/3/16965772/nissan-self-driving-slipper-propilot-leaf'
+              - column:
+                  name: AUTHOR
+                  value: 'Andrew J. Hawkins'
+              - column:
+                  name: VOTES
+                  value: 8
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 80
+              - column:
+                  name: HEADLINE
+                  value: 'SpaceX just launched two of its space internet satellites — the first of nearly 12,000'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/2018/2/15/17016208/spacex-falcon-9-launch-starlink-microsat-2a-2b-paz-watch-live'
+              - column:
+                  name: AUTHOR
+                  value: 'Loren Grush'
+              - column:
+                  name: VOTES
+                  value: 10
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 90
+              - column:
+                  name: HEADLINE
+                  value: 'Black Panther’s Killmonger is the MCU’s Magneto'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/2018/2/21/17036848/black-panther-killmonger-supervillain-comparison-magneto-xmen'
+              - column:
+                  name: AUTHOR
+                  value: 'Samantha Nelson'
+              - column:
+                  name: VOTES
+                  value: 10
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 91
+              - column:
+                  name: HEADLINE
+                  value: 'Russia blocks UN resolution on eastern Ghouta ceasefire'
+              - column:
+                  name: LINK
+                  value: 'https://www.theguardian.com/world/2018/feb/22/russia-un-resolution-eastern-ghouta-ceasefire-syria'
+              - column:
+                  name: AUTHOR
+                  value: 'Julian Borger'
+              - column:
+                  name: VOTES
+                  value: 2
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 92
+              - column:
+                  name: HEADLINE
+                  value: 'Donald Trump stands by proposal to give teachers guns: Attacks would end!'
+              - column:
+                  name: LINK
+                  value: 'https://www.theguardian.com/us-news/2018/feb/22/trump-proposal-teachers-guns-schools'
+              - column:
+                  name: AUTHOR
+                  value: 'Amanda Holpuch'
+              - column:
+                  name: VOTES
+                  value: -6
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 93
+              - column:
+                  name: HEADLINE
+                  value: 'New Russian stealth fighter spotted in Syria'
+              - column:
+                  name: LINK
+                  value: 'https://www.theguardian.com/world/2018/feb/22/new-russian-stealth-fighter-spotted-in-syria'
+              - column:
+                  name: AUTHOR
+                  value: 'Andrew Roth'
+              - column:
+                  name: VOTES
+                  value: 4
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 94
+              - column:
+                  name: HEADLINE
+                  value: 'Instagram’s code reveals potential voice and video calling features'
+              - column:
+                  name: LINK
+                  value: 'https://www.theverge.com/2018/3/2/17070434/instagram-code-apk-voice-video-calling-features'
+              - column:
+                  name: AUTHOR
+                  value: 'Thuy Ong'
+              - column:
+                  name: VOTES
+                  value: -9
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 95
+              - column:
+                  name: HEADLINE
+                  value: 'Our Language Affects What We See'
+              - column:
+                  name: LINK
+                  value: 'https://www.scientificamerican.com/article/our-language-affects-what-we-see/'
+              - column:
+                  name: AUTHOR
+                  value: 'Catherine L. Caldwell-Harris'
+              - column:
+                  name: VOTES
+                  value: 25
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 96
+              - column:
+                  name: HEADLINE
+                  value: 'Comprehensive Python Cheatsheet'
+              - column:
+                  name: LINK
+                  value: 'https://gto76.github.io/python-cheatsheet/'
+              - column:
+                  name: AUTHOR
+                  value: 'Catherine L. Caldwell-Harris'
+              - column:
+                  name: VOTES
+                  value: 65
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 97
+              - column:
+                  name: HEADLINE
+                  value: 'Everything you ever wanted to know about building a secure password reset feature'
+              - column:
+                  name: LINK
+                  value: 'https://www.troyhunt.com/everything-you-ever-wanted-to-know/'
+              - column:
+                  name: AUTHOR
+                  value: 'Troy Hunt'
+              - column:
+                  name: VOTES
+                  value: 55
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 98
+              - column:
+                  name: HEADLINE
+                  value: 'Future JavaScript: what is still missing?'
+              - column:
+                  name: LINK
+                  value: 'http://2ality.com/2019/01/future-js.html'
+              - column:
+                  name: AUTHOR
+                  value: 'Axel Rauschmayer'
+              - column:
+                  name: VOTES
+                  value: 75
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 99
+              - column:
+                  name: HEADLINE
+                  value: 'In-depth: Functional programming in C++'
+              - column:
+                  name: LINK
+                  value: 'http://www.gamasutra.com/view/news/169296/Indepth_Functional_programming_in_C.php'
+              - column:
+                  name: AUTHOR
+                  value: 'John Carmack'
+              - column:
+                  name: VOTES
+                  value: 32
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 100
+              - column:
+                  name: HEADLINE
+                  value: '5G: if you build it, we will fill it'
+              - column:
+                  name: LINK
+                  value: 'https://www.ben-evans.com/benedictevans/2019/1/16/5g-if-you-build-it-we-will-fill-it'
+              - column:
+                  name: AUTHOR
+                  value: 'John Carmack'
+              - column:
+                  name: VOTES
+                  value: 28
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 101
+              - column:
+                  name: HEADLINE
+                  value: 'The Strangeness of Black Holes'
+              - column:
+                  name: LINK
+                  value: 'http://nautil.us/issue/68/context/the-strangeness-of-black-holes'
+              - column:
+                  name: AUTHOR
+                  value: 'Enrico Brehm'
+              - column:
+                  name: VOTES
+                  value: 68
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 102
+              - column:
+                  name: HEADLINE
+                  value: 'Everything You Need To Know About Networking On AWS'
+              - column:
+                  name: LINK
+                  value: 'https://grahamlyons.com/article/everything-you-need-to-know-about-networking-on-aws'
+              - column:
+                  name: AUTHOR
+                  value: 'Graham Lyons'
+              - column:
+                  name: VOTES
+                  value: 73
+              - column:
+                  name: BY_USER
+                  value: 100
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 103
+              - column:
+                  name: HEADLINE
+                  value: 'Storing Memories in Your Synapses'
+              - column:
+                  name: LINK
+                  value: 'http://www.brainfacts.org/thinking-sensing-and-behaving/learning-and-memory/2018/storing-memories-in-your-synapses-101118'
+              - column:
+                  name: AUTHOR
+                  value: 'Deborah Halber'
+              - column:
+                  name: VOTES
+                  value: 8
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 104
+              - column:
+                  name: HEADLINE
+                  value: 'Comma-Separated Tree'
+              - column:
+                  name: LINK
+                  value: 'https://beta.observablehq.com/@mbostock/comma-separated-tree'
+              - column:
+                  name: AUTHOR
+                  value: 'Mike Bostock'
+              - column:
+                  name: VOTES
+                  value: 31
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 105
+              - column:
+                  name: HEADLINE
+                  value: 'Train Your Brain Like a Memory Champion'
+              - column:
+                  name: LINK
+                  value: 'https://www.nytimes.com/2019/01/09/smarter-living/train-your-brain-like-a-memory-champion.html'
+              - column:
+                  name: AUTHOR
+                  value: 'Bryan Clark'
+              - column:
+                  name: VOTES
+                  value: 81
+              - column:
+                  name: BY_USER
+                  value: 200
+        - insert:
+            tableName: ARTICLE
+            columns:
+              - column:
+                  name: ID_ARTICLE
+                  value: 106
+              - column:
+                  name: HEADLINE
+                  value: 'Write your Own Virtual Machine'
+              - column:
+                  name: LINK
+                  value: 'https://justinmeiners.github.io/lc3-vm/'
+              - column:
+                  name: AUTHOR
+                  value: 'Ryan Pendleton'
+              - column:
+                  name: VOTES
+                  value: 22
+              - column:
+                  name: BY_USER
+                  value: 100
