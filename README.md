@@ -19,8 +19,4 @@ However, I have uploaded the sql files for local creation.
 All you need is MySql workbench or similar, load the scripts and run them.
 Run the application in IDE of your preferences (I have used IntelliJ).
 
-Login credentials in the application:
-- user: bjakupovic
-- password: secret
-
 
